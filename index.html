@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ELOBOOST PRESTIGIO</title>
+</head>
+
+<body>
+    <div class="home">
+        <div class="topbar">
+            <img src="img/logo.svg" alt="" class="logo">
+            <a href="" class="telegram"></a>
+        </div>
+        <div class="container">
+            <div class="price">
+                <div class="calculator">
+                    <h2>Presupuesta <br> tu EloBoost.</h2>
+                    <div class="from">
+                        <h3>de</h3>
+                        <select id="from" style="display: none;" onchange="calc()">
+                        <option value="1">Hierro 4</option>
+                        <option value="2">Hierro 3</option>
+                        <option value="3">Hierro 2</option>
+                        <option value="4">Hierro 1</option>
+                        
+                        <option value="5">Bronze 4</option>
+                        <option value="6">Bronze 3</option>
+                        <option value="7">Bronze 2</option>
+                        <option value="8">Bronze 1</option>
+                        
+                        <option value="9">Plata 4</option>
+                        <option value="10">Plata 3</option>
+                        <option value="11">Plata 2</option>
+                        <option value="12">Plata 1</option>
+                        
+                        <option value="13">Oro 4</option>
+                        <option value="14">Oro 3</option>
+                        <option value="15">Oro 2</option>
+                        <option value="16">Oro 1</option>
+                        
+                        <option value="17">Platino 4</option>
+                        <option value="18">Platino 3</option>
+                        <option value="19">Platino 2</option>
+                        <option value="20">Platino 1</option>
+                        
+                        <option value="21">Diamante 4</option>
+                        <option value="22">Diamante 3</option>
+                        <option value="23">Diamante 2</option>
+                        <option value="24">Diamante 1</option>
+                    </select>
+                        <p class="dropdown materials" onClick="openOptions('drop1cont')" id="dropdown1">Hierro</p>
+                        <ul class="options dropdown-content" id="drop1cont">
+                            <li id="1" onClick="reply_click(this.id), drop1(this.innerHTML)" class="hierro">Hierro</li>
+                            <li id="5" onClick="reply_click(this.id), drop1(this.innerHTML)" class="bronze">Bronze</li>
+                            <li id="9" onClick="reply_click(this.id), drop1(this.innerHTML)" class="plata">Plata</li>
+                            <li id="13" onClick="reply_click(this.id), drop1(this.innerHTML)" class="oro">Oro</li>
+                            <li id="17" onClick="reply_click(this.id), drop1(this.innerHTML)" class="platino">Platino</li>
+                            <li id="21" onClick="reply_click(this.id), drop1(this.innerHTML)" class="diamante">Diamante</li>
+                        </ul>
+                        <p class="dropdown numbers" id="dropdown2" onClick="openOptions('drop2cont')">IV</p>
+                        <ul class="options dropdown-content" id="drop2cont">
+                            <li id="0" onClick="reply_click2(this.id), drop2(this.innerHTML)">IV</li>
+                            <li id="1" onClick="reply_click2(this.id), drop2(this.innerHTML)">III</li>
+                            <li id="2" onClick="reply_click2(this.id), drop2(this.innerHTML)">II</li>
+                            <li id="3" onClick="reply_click2(this.id), drop2(this.innerHTML)">I</li>
+
+                        </ul>
+                    </div>
+                    <div class="to">
+                        <h3>a</h3>
+                        <select id="to" style="display: none;" onchange="calc()">
+                        <option value="1">Hierro 4</option>
+                        <option value="2">Hierro 3</option>
+                        <option value="3">Hierro 2</option>
+                        <option value="4">Hierro 1</option>
+                        
+                        <option value="5">Bronze 4</option>
+                        <option value="6">Bronze 3</option>
+                        <option value="7">Bronze 2</option>
+                        <option value="8">Bronze 1</option>
+                        
+                        <option value="9">Plata 4</option>
+                        <option value="10">Plata 3</option>
+                        <option value="11">Plata 2</option>
+                        <option value="12">Plata 1</option>
+                        
+                        <option value="13">Oro 4</option>
+                        <option value="14">Oro 3</option>
+                        <option value="15">Oro 2</option>
+                        <option value="16">Oro 1</option>
+                        
+                        <option value="17">Platino 4</option>
+                        <option value="18">Platino 3</option>
+                        <option value="19">Platino 2</option>
+                        <option value="20">Platino 1</option>
+                        
+                        <option value="21">Diamante 4</option>
+                        <option value="22">Diamante 3</option>
+                        <option value="23">Diamante 2</option>
+                        <option value="24">Diamante 1</option>
+                        <option value="25">Master</option>
+                    </select>
+                        <p class="dropdown materials" id="dropdown3" onClick="openOptions('drop3cont')">Hierro</p>
+                        <ul class="options dropdown-content" id="drop3cont">
+                            <li id="1" onClick="reply_click3(this.id), drop3(this.innerHTML)">Hierro</li>
+                            <li id="5" onClick="reply_click3(this.id), drop3(this.innerHTML)">Bronze</li>
+                            <li id="9" onClick="reply_click3(this.id), drop3(this.innerHTML)" class="plata">Plata</li>
+                            <li id="13" onClick="reply_click3(this.id), drop3(this.innerHTML)" class="oro">Oro</li>
+                            <li id="17" onClick="reply_click3(this.id), drop3(this.innerHTML)" class="platino">Platino</li>
+                            <li id="21" onClick="reply_click3(this.id), drop3(this.innerHTML)" class="diamante">Diamante</li>
+                            <li id="25" onClick="reply_click3(this.id), drop3(this.innerHTML)" class="diamante">Master</li>
+                        </ul>
+                        <p class="dropdown numbers" id="dropdown4" onClick="openOptions('drop4cont')">IV</p>
+                        <ul class="options dropdown-content" id="drop4cont">
+                            <li id="0" onClick="reply_click4(this.id), drop4(this.innerHTML)">IV</li>
+                            <li id="1" onClick="reply_click4(this.id), drop4(this.innerHTML)">III</li>
+                            <li id="2" onClick="reply_click4(this.id), drop4(this.innerHTML)">II</li>
+                            <li id="3" onClick="reply_click4(this.id), drop4(this.innerHTML)">I</li>
+
+                        </ul>
+                    </div>
+                    <div class="moneda">
+                        <h3>Moneda</h3>
+                        <p class="dropdown materials moneda" id="dropdown5" onClick="openOptions('drop5cont')">CLP (Pesos Chilenos)</p>
+                        <ul class="options dropdown-content" id="drop5cont">
+                            <li onClick="reply_click5('clp'), drop5(this.innerHTML)">CLP (Pesos Chilenos)</li>
+                            <li onClick="reply_click5('ars'), drop5(this.innerHTML)">ARS (Pesos Argentinos)</li>
+                            <li onClick="reply_click5('sol'), drop5(this.innerHTML)">SOL (Soles Peruanos)</li>
+                            <li onClick="reply_click5('uyu'), drop5(this.innerHTML)">UYU (Pesos Uruguayos)</li>
+                            <li onClick="reply_click5('usd'), drop5(this.innerHTML)">USD (Dolar Norteamericano)</li>
+                        </ul>
+                    </div>
+                    <div class="button-center"><button class="presupuestar" onClick="calc(), nodisp(), changemsg()">PRESUPUESTAR</button></div>
+
+
+                </div>
+                <div class="result">
+                    <h1 class="equals"></h1>
+                    <h3 name="priceog" class="oldprice" id="clpd"></h3>
+                    <h1 class="priceext" id="clp"></h1>
+                    <div id="message" class="message">
+                        <h2>Tu presupuesto aparecera aqui.</h2>
+                    </div>
+                    <div id="message2" class="contratar nodisp">
+                        <p>Olvída tu liga actual y sube como espuma dejando de lado Trolls y AFK´s con nuestro servicio profesional, rápido y discreto. Sé el mejor de tus amigos y sorpréndelos con tu nuevo nivel. ¡Contrata ahora con el mejor eloboost de
+                            Chile!</p>
+                        <a href="https://wa.me/+5492262486758" id="urlcontratar" target="_blank">CONTRATAR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icons">
+            <div class="icon"><img src="" alt="">
+                <h3></h3>
+            </div>
+            <div class="icon"><img src="" alt="">
+                <h3></h3>
+            </div>
+            <div class="icon"><img src="" alt="">
+                <h3></h3>
+            </div>
+            <div class="icon"><img src="" alt="">
+                <h3></h3>
+            </div>
+            <div class="icon"><img src="" alt="">
+                <h3></h3>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="faqs">
+            <div class="container">
+                <h1>FAQs</h1>
+                <div class="faqinside">
+                    <div class="questions">
+                        <button id="quest1" onclick="reset(), setanswer('ans1'), active(), activate('quest1')" class="clicked">Es el eloboost seguro?</button>
+                        <button id="quest2" onclick="reset(), setanswer('ans2'), active(), activate('quest2')">Puedo jugar en dúo con el booster?</button>
+                        <button id="quest3" onclick="reset(), setanswer('ans3'), active(), activate('quest3')">Como funcionan sus políticas de reembolso?</button>
+                        <button id="quest4" onclick="reset(), setanswer('ans4'), active(), activate('quest4')">Mi cuenta está segura?</button>
+                        <button id="quest5" onclick="reset(), setanswer('ans5'), active(), activate('quest5')">Puedo jugar con mi cuenta durante el Boost?</button>
+                    </div>
+                    <div class="answers">
+                        <p id="ans1">Si. El eloboost es seguro, por lo que nunca han baneado ningún cliente. Es como jugar con un amigo mucho mejor que el jugador promedio "Puedo jugar en dúo con el booster?"</p>
+                        <p id="ans2" class="nodisp">Si por supuesto, puedes jugar en dúo seleccionando la opción de "Jugar con booster"</p>
+                        <p id="ans3" class="nodisp">Si el trabajo aún no ha comenzado y te has arrepentido te reembolsaremos sin ninguna pregunta, si el trabajo está en proceso, llegaremos a un acuerdo para el mismo</p>
+                        <p id="ans4" class="nodisp">Si, tu cuenta está segura. Todas las cuentas están vinculadas a un correo, el cual tiene todo el poder sobre la cuenta. Jamás te lo pediremos así que no hay riesgos</p>
+                        <p id="ans5" class="nodisp">¡Si! puedes jugar acordando un horario con nosotros o simplemente cuando el booster no esté subiendo. Recuerda no jugar clasificatorias durante el proceso</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="eloinfo">
+            <div class="container">
+                <video id="videol" class="videolol" onended="replay()" width='100%' height="100%" preload="metadata" playsinline="" loop="" muted="" playsinline autoplay muted loop>
+                    <source autoplay loop src="img/video.mp4" type="video/mp4">
+                    <source autoplay loop src="img/lolvideo.webm" type="video/webm">
+                </video>
+                <div class="inside">
+                    <h1>QUE ES EL <br> ELO BOOST?</h1>
+                    <p>El sistema de Elo de League of legends por ligas fue diseñado para emparejar jugadores del mismo nivel de habilidad para poder crear partidas balanceadas. Sin embargo, el sistema tiene algunas fallas. Ya que League of Legends es un
+                        juego de 5vs5, el sistema funcionará 5 veces con menos precisión en comparación a los juegos 1vs1. En la práctica, esto significa que para algunos jugadores será difícil llegar a la división a la que pertenecen. Aquí es donde nuestro
+                        boost entra en acción. Nuestro servicio está hecho para ayudar a todos los jugadores afectados por este problema.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="container">
+                <div class="text">
+                    <h1>CONTACTO</h1>
+                    <p>¡Podes escribirnos a traves de nuestro WhatsApp, tambien tenemos Instagram!</p>
+                </div>
+                <div class="icons">
+                    <a href="https://www.instagram.com/eloboost_prestigio/" class="icon-contact" target="_blank"><img src="img/instagram.svg" alt=""></a>
+                    <a href="https://wa.me/+5492262486758" class="icon-contact" target="_blank"><img src="img/whatsapp.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 id="clp" style="display: none ;"></h1>
+    <h1 id="sol" style="display: none ;"></h1>
+    <h1 id="usd" style="display: none ;"></h1>
+    <h1 id="ars" style="display: none ;"></h1>
+    <h1 id="uyu" style="display: none ;"></h1>
+    <h1 id="clpd" style="display: none ;"></h1>
+    <h1 id="sold" style="display: none ;"></h1>
+    <h1 id="usdd" style="display: none ;"></h1>
+    <h1 id="arsd" style="display: none ;"></h1>
+    <h1 id="uyud" style="display: none ;"></h1>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!--! https://api.whatsapp.com/send?phone=542262486758&text=preloaded%20message ->
