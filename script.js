@@ -83,7 +83,7 @@ function reply_click3(clicked_id) {
         var elo3comp = elo4 + parseInt(clicked_id);
         console.log('not master')
         document.getElementById('drop4cont').style = "";
-        document.getElementById('dropdown4').innerHTML = "IV";
+
     } else {
         var elo3comp = parseInt(clicked_id);
         console.log('master')
