@@ -12,7 +12,7 @@ var costs = [
 function calc() {
 
     var clp = 850;
-    var ars = 150;
+    var ars = 200;
     var pen = 3.79;
     var uyu = 40;
 
