@@ -141,7 +141,6 @@ function reset() {
     document.getElementById('ans4').classList.add("nodisp");
     document.getElementById('ans5').classList.add("nodisp");
     document.getElementById('ans6').classList.add("nodisp");
-    document.getElementById('ans7').classList.add("nodisp");
 }
 
 function setanswer(ans) {
@@ -155,7 +154,6 @@ function active() {
     document.getElementById('quest4').classList.remove("clicked");
     document.getElementById('quest5').classList.remove("clicked");
     document.getElementById('quest6').classList.remove("clicked");
-    document.getElementById('quest7').classList.remove("clicked");
 }
 
 function activate(questid) {

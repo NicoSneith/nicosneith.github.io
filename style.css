@@ -350,6 +350,10 @@ div.moneda {
     transition: all .2s ease-out;
 }
 
+#ans1 {
+    font-size: 0.9em;
+}
+
 @media screen and (max-width: 600px) {
     .price {
         display: grid;
